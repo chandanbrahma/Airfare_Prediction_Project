@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body bgcolor='#66CDAA'>
+ <div class="login">
+  <center>
+	<h1>AirLine Fare Prediction</h1>
+	    <h2>Range of Date is</h2>  
+    <h2>10-06-2019 to 11-07-2019</h2>
+    
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="radio" name="options" id="Domestic" value="Domestic"> Domestic </input><br>
+        <input type="radio" name="options" id="International" value="International"> International </input><br><br>
+		<input type="date" name="date" class="form-control" min="2019-06-11" max="2019-07-10">
+
+        <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+        </div>
+        </center>
+
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/dibyanjan-patra/Air-Fare-prediction--Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+           </div>
+           <center>
+           <p class='footer-description'>Made with ❤️ by Dibu, Smita,Pooja,Chandan, Arun.</p>
+       </div>
+
+   <br>
+   <br>
+   <center>
+          {{ prediction_text }}
+
+
+
+ </div>
+</center>
+    <a target="_blank" href="https://github.com/dibyanjan-patra/Air-Fare-prediction--Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+           </div>
+
+
+</body>
+</html>

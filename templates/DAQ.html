@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</style>
+</head>
+<body bgcolor='#66CDAA'>
+<center>
+<h1>Airline fare prediction</h1>
+<h2>Range of Date is</h2>  
+    <h2>10-06-2019 to 11-07-2019</h2>
+    
+
+<form action="{{ url_for('home') }}" method="POST">
+  <input type="radio" name="options" id="Domestic" value="Domestic"> Domestic </input><br>
+  <input type="radio" name="options" id="International" value="International"> International </input><br>
+  <label for="date">Date:</label>
+  <input type="date" id="ddate" name="ddate" min="2019-06-11" max="2019-07-10" required>
+  <br><br><br>
+ <button type="submit" name="submit">Predict</button>
+</form>
+</center>
+</form>
+        </div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+            <center>
+               <a target="_blank" href="https://github.com/dibyanjan-patra/Air-Fare-prediction--Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+           </div>
+           <center>
+           <p class='footer-description'>Made with ❤️ by Dibu, Smita,Pooja,Chandan, Arun.</p>
+       </div>
+
+   <br>
+   <br>
+</body>
+</html>
+<center>
+{{prediction}}
+</center>
